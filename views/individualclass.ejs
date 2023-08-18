@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/pagestyles.css">
+  <title>My Notes</title>
+</head>
+<body>
+    <div class = "flexed">
+        <div class= "box1">
+            <form action="/homed" method="get">
+                <button class="btn btn-primary btn:hover btn-info"type="submit">Home</button>
+              </form>
+        </div>
+        
+        <div class = "box2">               
+            
+        <form action="/newsletter" method="get">
+            <button class="btn btn-primary btn:hover btn-info"type="submit">Newsletter</button>
+        </form>
+        </div>
+        <div class = "box3">
+            
+        <form action="/quotes" method="get">
+            <button class="btn btn-primary btn:hover btn-info"type="submit">Quotes</button>
+        </form>
+    
+        </div>
+        <div class = "box4">                  
+        <form action="/logout" method="get">
+            <button class="btn btn-primary btn:hover btn-info"type="submit">Logout</button>
+        </form>
+        </div>
+    </div>  
+  <h1>Class Info</h1>
+  
+  <div class = "parent"> 
+    <% pages.forEach(page => { %>
+      <div class = "child">
+        <p class = "innertext"><%= page.typeofinfo %></p>
+        <p class = "innertext"><%= page.description %></p>
+        <form action="/posts/<%= page.usersid %>/<%= page.id %>/<%= page.description %>" method="get">
+            <button type="submit">Delete</button>
+        </form>
+      </div> 
+    <% }); %>
+  </div>
+  <h1> Create a Post </h1>
+  <div class = "largeboi">
+    <form action="/pagespost" method="post">
+      <label for="typeofinfo">Enter the type of info:</label>
+      <input type="text" name="typeofinfo" id="typeofinfo" required>
+      <label for="description">Enter the description:</label>
+      <input type="text" name="description" id="description" required>
+      <button type="submit">Submit</button>
+  </form>
+  </div>
+
+
+</body>
+</html>

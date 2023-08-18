@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/notestyles.css">
+  <title>My Notes</title>
+</head>
+<body>
+  <div class = "flexed">
+    <div class= "box1">
+        <form action="/homed" method="get">
+            <button class="btn btn-primary btn:hover btn-info"type="submit">Home</button>
+          </form>
+    </div>
+    
+    <div class = "box2">               
+        
+    <form action="/newsletter" method="get">
+        <button class="btn btn-primary btn:hover btn-info"type="submit">Newsletter</button>
+    </form>
+    </div>
+    <div class = "box3">
+        
+    <form action="/quotes" method="get">
+        <button class="btn btn-primary btn:hover btn-info"type="submit">Quotes</button>
+    </form>
+
+    </div>
+    <div class = "box4">                  
+    <form action="/logout" method="get">
+        <button class="btn btn-primary btn:hover btn-info"type="submit">Logout</button>
+    </form>
+    </div>
+</div>  
+  <h1>My Classes</h1>
+  
+  <div class = "parent"> 
+    <% notes.forEach(note => { %>
+      <div class = "child">
+        <form action='/postfirst/<%= note.text %>' method="get">
+          <button type="submit"><%= note.text %></button>
+        </form>
+        <form action="/notes/<%= note.real_user_id %>/<%= note.text %>" method="get">
+          <button type="submit">Delete</button>
+          </form>
+      </div> 
+    <% }); %>
+  </div>
+  <h1> Create a Class </h1>
+  <div class = "largeboi">
+    <form action="/notespost" method="post">
+      <label for="textbody">Enter your text:</label>
+      <input type="text" name="textbody" id="textbody" >
+      <button type="submit">Submit</button>
+  </form>
+  </div>
+
+</body>
+</html>

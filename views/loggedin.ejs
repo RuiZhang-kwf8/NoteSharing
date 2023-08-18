@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylesregister.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">    
+  
+    <title>Rui Zhang</title>
+
+</head>
+<body>
+        <div class = "flexed">
+            <div class= "box1">
+                <form action="/" method="get">
+                    <div class="button-container">  
+                        <button class="btn btn-primary btn:hover btn-info" type="button">Home</button>
+                    </div>
+                  </form>
+            </div>
+            
+            <div class = "box2">               
+            <form action="/newsletter" method="get">
+                <button  class="btn btn-primary btn:hover btn-info" id = "movedown" type="button">Newsletter</button>
+            </form>
+            </div>
+            <div class = "box3">
+            <form action="/quotes" method="get">
+                <button  class="btn btn-primary btn:hover btn-info" id = "movedown"  type="submit">Quotes</button>
+            </form>
+            </div>
+            <div class = "box4">                  
+            <form action="/login" method="get">
+                <button class="btn btn-primary btn:hover btn-info"id = "movedown" type="submit">Login</button>
+            </form>
+            </div>
+            <div class = "box4">
+            <form action="/register" method="get">
+                <button  class="btn btn-primary btn:hover btn-info"id = "movedown"  type="submit">Register</button>
+            </form>
+            </div>
+        </div>
+        
+    <h1>Login</h1>
+    <p>Please fill out this form with the required information</p>
+    <form id="largerform" method="post" action='/login'>
+      <fieldset>
+        <label for="username">Enter Your UserName: <input id="username" name="username" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <label for="password">Enter Your Password: <input id="password" name="password" type="password" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="terms-and-conditions" name="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="referrer">How did you hear about this website?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">Linkedin</option>
+            <option value="2">Resume</option>
+            <option value="3">Friend</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit">
+  </form>
+
+
+</body>
+</html>

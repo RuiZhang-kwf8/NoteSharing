@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/newsletter.css">
+    <title>Newsletter</title>
+</head>
+<body>
+    <div class = "flexed">
+        <div class= "box1">
+            <form action="/" method="get">
+                <div class="button-container">  
+                    <button class="btn btn-primary btn:hover btn-info" type="button">Home</button>
+                </div>
+              </form>
+        </div>
+        
+        <div class = "box2">               
+        <form action="/newsletter" method="get">
+            <button  class="btn btn-primary btn:hover btn-info" id = "movedown" type="button">Newsletter</button>
+        </form>
+        </div>
+        <div class = "box3">
+        <form action="/quotes" method="get">
+            <button  class="btn btn-primary btn:hover btn-info" id = "movedown"  type="submit">Quotes</button>
+        </form>
+
+        </div>
+        <div class = "box4">                  
+        <form action="/login" method="get">
+            <button class="btn btn-primary btn:hover btn-info"id = "movedown" type="submit">Login</button>
+        </form>
+        </div>
+        <div class = "box4">
+        <form action="/register" method="get">
+            <button  class="btn btn-primary btn:hover btn-info"id = "movedown"  type="submit">Register</button>
+        </form>
+        </div>
+    </div>
+    <div class="newsletter">
+        <div class="content">
+            <h1>Monthly Newsletter</h1>
+            <p>Welcome to our monthly newsletter! Stay updated with the latest news and updates.</p>
+            <a href="www.instagram.com" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <div class="subscribe">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Enter your email to receive our monthly newsletter.</p>
+        <form action="/home" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </div>
+
+    <div class="news-section">
+        <h2>Website Update News</h2>
+        <p>Stay tuned for the latest updates on our website's features and improvements.</p>
+        <a href="www.instagram.com" class="btn">Read More</a>
+    </div>
+
+    <div class="news-section">
+        <h2>UVA News</h2>
+        <p>Get informed about the latest achievements and events at the University of Virginia.</p>
+        <a href="www.instagram.com" class="btn">Read More</a>
+    </div>
+</body>
+</html>
