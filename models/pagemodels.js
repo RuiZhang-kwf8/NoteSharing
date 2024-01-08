@@ -21,8 +21,7 @@ const pageSchema = mongoose.Schema(
         type: String,
         required: [true, "Please add a user id"]
     }
-}
-    ,
+},
     {
       timestamps: true,
     }
